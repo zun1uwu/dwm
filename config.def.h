@@ -28,7 +28,19 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8" };
+static const char *tags[] = { "0x1", "0x2", "0x3", "0x4", "0x5", "0x6", "0x7", "0x8", "0x9" };
+
+static const char *tagsel[][2] = {
+	{ "#111111", "#fc7d71" },
+	{ "#111111", "#fcc271" },
+	{ "#111111", "#fcfa71" },
+	{ "#111111", "#7ffc71" },
+	{ "#111111", "#71fccb" },
+	{ "#111111", "#71c0fc" },
+	{ "#111111", "#717afc" },
+	{ "#111111", "#b271fc" },
+	{ "#111111", "#fc71d9" },
+};
 
 static const Rule rules[] = {
 	/* xprop(1):
