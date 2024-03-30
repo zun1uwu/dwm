@@ -7,6 +7,9 @@ Requirements
 ------------
 In order to build dwm you need the Xlib header files.
 
+This fork of dwm uses alacritty by default and comes with keybinds
+for playerctl and ksnip.
+
 
 Installation
 ------------
