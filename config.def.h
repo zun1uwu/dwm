@@ -28,7 +28,7 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "0x1", "0x2", "0x3", "0x4", "0x5", "0x6", "0x7", "0x8", "0x9" };
+static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 
 static const char *tagsel[][2] = {
 	{ "#111111", "#fc7d71" },
@@ -79,17 +79,19 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
-static const char *termcmd[]  = { "st", NULL };
+static const char *termcmd[]  = { "alacritty", NULL };
 static const char *toggleaudiocmd[] = { "playerctl", "play-pause", NULL };
 static const char *prevaudiocmd[] = { "playerctl", "previous", NULL };
 static const char *nextaudiocmd[] = { "playerctl", "next", NULL };
 static const char *stopaudiocmd[] = { "playerctl", "stop", NULL };
 static const char *flameshotcmd[] = { "ksnip", "-r", NULL };
+static const char *fmcmd[] = { "thunar", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
+	{ MODKEY,			XK_e,	   spawn,          {.v = fmcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
